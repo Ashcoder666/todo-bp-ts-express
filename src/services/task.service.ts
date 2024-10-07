@@ -24,8 +24,10 @@ class TaskServices {
     return `task created succesfully`
   }
 
-  static readAllTasks(){
-    
+  static async readAllTasks(){
+    const allTasks =  await TaskModel.find()
+    console.log(allTasks)
+    return allTasks
   }
  
 }

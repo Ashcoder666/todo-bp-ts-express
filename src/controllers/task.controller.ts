@@ -7,6 +7,11 @@ class TaskControllers {
         const status =  TaskServices.createTask(req.body.task_title,req.body.task_desc,req.body.task_status,req.body.created_at)
         res.send(status)
     }
+
+    static async getAllTasks(req:Request,res:Response){
+        const allTasks =  await TaskServices.readAllTasks()
+        res.send(allTasks)
+    }
 }
 
 
