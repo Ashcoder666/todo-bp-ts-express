@@ -24,6 +24,9 @@ class TaskServices {
     return `task created succesfully`
   }
 
+  static readAllTasks(){
+    
+  }
  
 }
 
